@@ -40,7 +40,7 @@ The debugger will successfully launch the server with the included `launch.json`
 ## Requirements
  - An ES6 compatible version of NodeJS and NPM
 
-Run `npm run tests` to check that all vanilla ES6 is lined up. Since there are no custom or extranious code files or build processes that are not provided from ES6 itself or fully tested libraries a simple lint confirms ALL functionality on both the server and the client code base. This is due to the way that Javascript encapsulates code and modules. Changing a dependancy that is loading in an encapsulated area would require extraction to a seperate context and handling. While able to be done, with how simple this development server needed to be a strict Lint is considered good enough because it will track and resolve all dependancies and verify proper implimentation
+Run `npm run tests` and check if any errors come up. It will performa and install and then run the test.
 
 # Bundling and Building
 You don't need to! Thanks to ES6 the imports will work as expected across the application and there isn't anymore than a single Script tag in the HTML page. In fact you can find the entire contents of the index below:
