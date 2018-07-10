@@ -1,7 +1,7 @@
 {
   "name": "willimasonoma",
   "scripts": {
-    "test": "npm install && node ./node_modules/eslint/bin/eslint.js **/*.js --ignore-pattern node_modules/ && echo All tests finished. If you don't see any errors you're done"
+    "test": "npm install && node ./node_modules/eslint/bin/eslint.js **/*.js --ignore-pattern node_modules/ && echo Finshed tests against all files. No tests failed."
   },
   "author": "Robert Mennell <rnmennell@gmail.com>",
   "devDependencies": {
