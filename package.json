@@ -1,7 +1,7 @@
 {
   "name": "willimasonoma",
   "scripts": {
-    "test": "npm install && node ./node_modules/eslint/bin/eslint.js **/*.js --ignore-pattern node_modules/ && echo Finshed tests against all files. No tests failed."
+    "test": "echo Installing dependancies and checking for vulnerabilities && npm install && echo Testing each individual file && node ./node_modules/eslint/bin/eslint.js **/*.js --ignore-pattern node_modules/ && echo Finshed tests against all files. No tests failed."
   },
   "author": "Robert Mennell <rnmennell@gmail.com>",
   "devDependencies": {
