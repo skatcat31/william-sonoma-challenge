@@ -40,10 +40,7 @@ The debugger will successfully launch the server with the included `launch.json`
 ## Requirements
  - An ES6 compatible version of NodeJS and NPM
 
-Run `npm run tests` and check if any errors come up. It will performa and install and then run the test.
-
-# Bundling and Building
-You don't need to! Thanks to ES6 the imports will work as expected across the application and there isn't anymore than a single Script tag in the HTML page. In fact you can find the entire contents of the index below:
+Run `npm run tests` and check if any errors come up. It will perform an install and then run the test.
 
 ```html
 <!DOCTYPE html>
