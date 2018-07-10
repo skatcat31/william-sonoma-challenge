@@ -1,0 +1,16 @@
+{
+  "name": "willimasonoma",
+  "scripts": {
+    "test": "npm install && node ./node_modules/eslint/bin/eslint.js **/*.js --ignore-pattern node_modules/ && echo All tests finished. If you don't see any errors you're done"
+  },
+  "author": "Robert Mennell <rnmennell@gmail.com>",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.12.0"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
