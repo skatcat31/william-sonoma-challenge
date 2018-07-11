@@ -19,9 +19,9 @@ function productSlides(product) {
   hover.appendChild(text);
 
   // the price
-  if (product.priceRange && product.priceRange.selling) {
     const price = document.createElement('div');
     price.classList.add('img__text-no-top-pad');
+  if (product.priceRange && product.priceRange.selling) {
     /* eslint-disable no-nested-ternary */
     price.innerText = product.priceRange.selling.low && product.priceRange.selling.high
       ? `$${product.priceRange.selling.low} - $${product.priceRange.selling.high}`
@@ -30,8 +30,10 @@ function productSlides(product) {
         : product.priceRange.selling.low
           ? `$${product.priceRange.selling.low}`
           : '$--';
-    hover.appendChild(price);
+  } else {
+    price.innerText = '$--';
   }
+  hover.appendChild(price);
 
   // the image
   const img = document.createElement('img');
