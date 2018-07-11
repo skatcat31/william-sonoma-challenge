@@ -61,6 +61,7 @@ class SlideShow {
    * @param {String} props.container What id we should mount too
    */
   constructor(props) {
+    if (!props.container) throw new TypeError('Props must contain a container reference');
     let container = document.getElementById(props.container);
     let index = 0;
 
