@@ -41,7 +41,6 @@ Bundling take a large ammount of files and extracts the code into a single file 
     <div id="slideshow"></div>
     <div id="header"></div>
     <div id="container"></div>
-    </div>
 </body>
 </html>
 ```
