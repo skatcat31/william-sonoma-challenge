@@ -1,6 +1,6 @@
 // dependancies
-import loader from './loader.module.js';
-import productsList from './products/list.module.js';
+import loader from '../loader.module.js';
+import productsList from './list.module.js';
 
 /**
  * List Module

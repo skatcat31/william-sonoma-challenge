@@ -6,7 +6,7 @@
  */
 
 // Dependancies
-import ProductsList from './modules/productsList.class.js';
+import ProductsList from './modules/products/list.class.js';
 import SlideShow from './modules/slideShow.class.js';
 import Header from './modules/header.module.js';
 import staticJSON from './modules/static';
