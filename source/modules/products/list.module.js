@@ -1,7 +1,7 @@
 // dependancies
 import style from './list.style.js';
-import productSlide from './products.slides.module.js';
-import previewStyle from './products.slides.style.js';
+import productSlide from './slides.module.js';
+import previewStyle from './slides.style.js';
 
 /**
  * Generates a flex list of Product Tiles
