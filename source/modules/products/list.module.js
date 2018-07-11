@@ -9,6 +9,9 @@ import previewStyle from './slides.style.js';
  * @param {SlideShow} slideShow Peer dependancy from parent passed for click handlers
  */
 function productsList(products, slideShow) {
+  // crash on missing setState function
+  if (typeof slideShow.setState !== 'function') throw new TypeError('The slideShow must expose a setState function');
+
   // create a parent
   const parent = document.createElement('div');
 
