@@ -59,7 +59,9 @@ Plus because CORS would be broken anyways you'd only get the static JSON file th
 ## Requirements
  - An ES6 compatible version of NodeJS
 
-Open a command prompt and use node to launch `server.js` and visit your loopback adapter on the declared port or the default port of 3000 to see the page
+Open a command prompt and run `npm start` to launch the server. It will lint and then serve all file
+
+Alternatively you can run the server only with `npm run server`
 
 ## Environment Variables
  - `PORT`: Number, the port you would like to run on. If not provided it will run on port 3000
@@ -72,7 +74,19 @@ The debugger will successfully launch the server with the included `launch.json`
 ## Requirements
  - An ES6 compatible version of NodeJS and NPM
 
-Run `npm run tests` and check if any errors come up. It will perform an install and then run the test.
+## Linting
+Run `npm test` and check if any errors come up. It will perform an install and then run the linter
+
+If the linting fails it'll expose the errors
+
+When the linter succeeds it'll inform you that all tests have passed
+
+Alternatively you can run `npm run start` to lint all the files and then start the server. This is however slow so it's not recomended you use it to start the server every time
+
+## Unit Tests
+Each JavaScript file has a unit test script and there is a unit testing page to run all the tests
+
+To see them and their results start the server and visit `/test` to see the results
 
 # The Product List
 
