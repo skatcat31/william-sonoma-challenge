@@ -88,7 +88,11 @@ class SlideShow {
     this.show = () => {
       // clear it out
       this.hide();
-      if (!this.state.images[index] || !this.state.images[index].href) return;
+      if (
+        !this.state.images
+        || !this.state.images[index]
+        || !this.state.images[index].href
+      ) return;
       container.appendChild(style);
       // setup the modal overlay
       const modal = document.createElement('div');
