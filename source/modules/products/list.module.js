@@ -1,7 +1,7 @@
 // dependancies
 import style from './list.style.js';
-import productSlide from './slides.module.js';
-import previewStyle from './slides.style.js';
+import productSlide from './slide.module.js';
+import previewStyle from './slide.style.js';
 
 /**
  * Generates a flex list of Product Tiles
@@ -9,6 +9,9 @@ import previewStyle from './slides.style.js';
  * @param {SlideShow} slideShow Peer dependancy from parent passed for click handlers
  */
 function productsList(products, slideShow) {
+  // crash on missing setState function
+  if (typeof slideShow.setState !== 'function') throw new TypeError('The slideShow must expose a setState function');
+
   // create a parent
   const parent = document.createElement('div');
 
@@ -25,7 +28,9 @@ function productsList(products, slideShow) {
   // Generate and register the cards
   products.forEach((product) => {
     const item = productInfo.cloneNode(true);
-    item.onclick = () => slideShow.setState({ images: product.images });
+    if (product.images && product.images.length) {
+      item.onclick = () => slideShow.setState({ images: product.images });
+    }
     item.appendChild(productSlide(product));
     return parent.appendChild(item);
   });

@@ -61,6 +61,7 @@ class SlideShow {
    * @param {String} props.container What id we should mount too
    */
   constructor(props) {
+    if (!props.container) throw new TypeError('Props must contain a container reference');
     let container = document.getElementById(props.container);
     let index = 0;
 
@@ -87,7 +88,11 @@ class SlideShow {
     this.show = () => {
       // clear it out
       this.hide();
-      if (!this.state.images[index] || !this.state.images[index].href) return;
+      if (
+        !this.state.images
+        || !this.state.images[index]
+        || !this.state.images[index].href
+      ) return;
       container.appendChild(style);
       // setup the modal overlay
       const modal = document.createElement('div');

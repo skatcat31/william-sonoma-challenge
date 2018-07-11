@@ -28,6 +28,8 @@ style.innerText = `
  * @param {String} props.container The id to mount on
  */
 function Header(props) {
+  if (!props.title) throw new TypeError('props did not provide a title');
+  if (!props.container) throw new TypeError('props did not provide a container');
   // construct the header
   const header = document.createElement('div');
   header.classList.add('header__header');
