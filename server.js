@@ -29,4 +29,7 @@ app.use(
 app.use(require('./server/errorHandler'));
 
 // Begin listening
-app.listen(process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
+app.listen(port);
+
+console.log(`The server has started. Please visit your loopback adapter on port ${port}`); // eslint-disable-line no-console
