@@ -22,25 +22,9 @@ There isn't one. With ES imports there is less and less reason to bundle for the
 The lack of a bundle also allows for updating of individual components and bugfixes can go out incrimentally instead of requiring a brand new bundle to be pushed  
 This means the next time someone visits the page they see the new version!
 
-# Running the Server and Visiting the Site
+## Why didn't it get bundled?
 
-## Requirements
- - An ES6 compatible version of NodeJS
-
-Open a command prompt and use node to launch `server.js` and visit your loopback adapter on the declared port or the default port of 3000 to see the page
-
-## Environment Variables
- - `PORT`: Number, the port you would like to run on. If not provided it will run on port 3000
-
-## Visual Studio Code
-The debugger will successfully launch the server with the included `launch.json` configuration
-
-# Tests
-
-## Requirements
- - An ES6 compatible version of NodeJS and NPM
-
-Run `npm run tests` and check if any errors come up. It will perform an install and then run the test.
+Bundling take a large ammount of files and extracts the code into a single file that can be loaded by the front end and executed. Often it ends up needing source maps to keep developers able to debug and access the code in execution. However with ES6 imports and more modern design philosphies we can instead work with much smaller and more declaritive code without needing a build step. In fact the page itself is so small it's been copied into the readme.
 
 ```html
 <!DOCTYPE html>
@@ -70,6 +54,26 @@ Building would let you develop without a local static server and just visiting t
 It does however run into the issue of longer times to load, and slower parsing times. Performance drops from 100 in audits and that's not cool!
 
 Plus because CORS would be broken anyways you'd only get the static JSON file that was downloaded BEFORE starting development instead of the latest version from `https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json` on each refresh
+
+# Running the Server and Visiting the Site
+
+## Requirements
+ - An ES6 compatible version of NodeJS
+
+Open a command prompt and use node to launch `server.js` and visit your loopback adapter on the declared port or the default port of 3000 to see the page
+
+## Environment Variables
+ - `PORT`: Number, the port you would like to run on. If not provided it will run on port 3000
+
+## Visual Studio Code
+The debugger will successfully launch the server with the included `launch.json` configuration
+
+# Tests
+
+## Requirements
+ - An ES6 compatible version of NodeJS and NPM
+
+Run `npm run tests` and check if any errors come up. It will perform an install and then run the test.
 
 # The Product List
 
