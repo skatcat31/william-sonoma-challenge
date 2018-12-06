@@ -138,6 +138,11 @@ class SlideShow {
       // Empty the show
       const newContainer = container.cloneNode();
       container.parentNode.replaceChild(newContainer, container);
+      // clear event listeners
+      const modal = container.querySelector('.modal');
+      const img = container.querySelector('img');
+      if (modal) modal.onclick = null;
+      if (img) img.onclick = null;
       container = newContainer;
     };
   }
